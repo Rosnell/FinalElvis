@@ -6,6 +6,19 @@
   <title>Hola Mundo</title>
 </head>
 <body>
-  <h1>Hola Mundo</h1>
+  <h1 id="hello">Hola Mundo</h1>
+
+  <!-- Prueba -->
+  <script>
+  
+    test('El título debe ser "Hola Mundo"', () => {
+
+      const titleElement = document.getElementById('hello');
+
+      // Verificacion
+      expect(titleElement).not.toBeNull();
+      expect(titleElement.textContent).toBe('Hola Mundo');
+    });
+  </script>
 </body>
 </html>
